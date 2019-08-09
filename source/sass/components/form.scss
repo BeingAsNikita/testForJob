@@ -1,0 +1,49 @@
+.form {
+  width: 290px;
+  position: absolute;
+  top: 365px;
+  text-align: center;
+  padding-top: 27px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 32px;
+  background-color: $primary-light;
+  color: $primary-dark;
+  left: 50%;
+  margin-left: -145px;
+  border-radius: 3px;
+  box-shadow: -1px 10px 19px -6px rgba(0, 0, 0, 0.35);
+}
+
+.form__title {
+  color: $primary-dark;
+  margin-bottom: 0;
+}
+
+.form__text {
+  margin: 0;
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.form__input {
+  width: 100%;
+  background-color: $input;
+  margin-top: 23px;
+  padding-left: 13px;
+  padding-top: 12px;
+  padding-right: 13px;
+  padding-bottom: 11px;
+  border-radius: 3px;
+  border: 2px solid rgba($primary-dark, 0.1);
+
+  &::placeholder {
+    color: $primary-dark;
+    font-size: 16px;
+  }
+
+  &--textarea {
+    min-height: 83px;
+    font-size: 18px;
+  }
+}

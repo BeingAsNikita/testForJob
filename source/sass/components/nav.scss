@@ -1,0 +1,60 @@
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgba($primary-dark, 0.45);
+  padding-top: 9px;
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.nav__logo-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+  color: $primary-light;
+}
+
+.nav__logo-text {
+  font-size: 13px;
+  margin: 0;
+  color: $primary-light;
+}
+
+.nav__button {
+  display: block;
+  width: 21px;
+  height: 2px;
+  border: none;
+  background-color: $primary-light;
+  position: absolute;
+  right: 15px;
+  top: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 21px;
+    height: 2px;
+    top: -10px;
+    left: 0;
+    background-color: $primary-light;
+  }
+}
+
+.nav__list {
+  display: none;
+  flex-direction: column;
+}
+
+.nav__item {
+  text-transform: uppercase;
+  color: $primary-light;
+  text-align: center;
+}
