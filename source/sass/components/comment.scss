@@ -1,0 +1,123 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 18px 18px 18px 18px;
+  background-color: $primary-ligth;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    padding: 23px 31px 22px 28px;
+    line-height: 24px;
+    min-height: 155px;
+  }
+
+  &--panorama {
+    @media (min-width: $tablet-width) {
+      padding: 22px 18px 18px 27px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      min-height: 120px;
+    }
+
+    @media (min-width: $tablet-width) {
+      min-height: 46px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 24px;
+      padding-bottom: 12px;
+    }
+  }
+}
+
+.wrapper {
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    width: 940px;
+  }
+}
+
+.comment__author {
+  font-weight: bold;
+}
+
+.comment__author-container {
+  &--panorama {
+    @media (min-width: $tablet-width) {
+      order: -1;
+      width: 150px;
+    }
+  }
+}
+
+.comment__text {
+  margin: 0;
+  padding-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 11px;
+  }
+}
+
+.comment__date {
+  font-family: italic;
+  color: $primary-dark;
+}
+
+.comment__like {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: auto;
+  color: $accent;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 24px;
+  margin-bottom: 0;
+
+  &--panorama {
+    @media (min-width: $tablet-width) {
+      order: -1;
+      width: 150px;
+      margin-left: auto;
+      padding-left: 19px;
+    }
+  }
+}
+
+.comment__button-like {
+  order: -1;
+  border: none;
+  margin-right: 17px;
+  width: 14px;
+  height: 12px;
+  font-size: 0;
+  line-height: 0;
+  background-color: inherit;
+  background-image: url("../../img/icon-heart.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+  }
+
+  &--panorama {
+    @media (min-width: $tablet-width) {
+      order: 0;
+      margin-left: 19px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 12px;
+    }
+  }
+}

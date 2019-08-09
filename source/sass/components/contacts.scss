@@ -1,0 +1,126 @@
+.contacts {
+  padding-bottom: 20px;
+  padding-top: 44px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 67px;
+    padding-bottom: 0;
+  }
+}
+
+.contacts__title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 50px;
+    line-height: 58px;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.contacts__item {
+  width: 100%;
+
+  &--tel {
+    order: 0;
+    padding-top: 36px;
+
+    @media (min-width: $desktop-width) {
+      order: 1;
+      padding-right: 23px;
+    }
+  }
+
+  &--address {
+    order: 2;
+    padding-top: 25px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 auto;
+      padding-top: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 1;
+    }
+  }
+
+  &--mail {
+    order: 1;
+    padding-top: 24px;
+
+    @media (min-width: $desktop-width) {
+      order: 2;
+      padding-left: 23px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    padding-top: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 33%;
+    padding-top: 57px;
+  }
+}
+
+.contacts__text {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 26px;
+  }
+}
+
+.contacts__link {
+  font-size: 24px;
+  font-weight: 300;
+  color: $accent;
+  margin-top: 7px;
+
+  &:hover {
+    text-decoration: underline;
+    color: $primary-dark;
+  }
+
+  &:active {
+    text-decoration: underline;
+    color: rgba($primary-dark, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 242px;
+    margin: 0 auto;
+    margin-top: 14px;
+  }
+}
