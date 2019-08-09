@@ -1,9 +1,80 @@
 .price-list {
+  padding-top: 38px;
+  padding-bottom: 41px;
   color: $primary-dark;
+  background-color: $input;
   text-align: center;
   line-height: 31px;
 }
 
 .price-list__title {
   text-transform: uppercase;
+}
+
+.price-list__table {
+  position: relative;
+  display: table;
+  width: 100%;
+  margin-bottom: 32px;
+  line-height: 18px;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.price-list__row {
+  display: table-row;
+  background-color: $primary-light;
+
+  &:nth-child(2n-1) {
+    background-color: $table;
+    height: 56px;
+  }
+}
+
+.table__header {
+  display: table-cell;
+  color: $primary-light;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: $accent;
+  text-align: left;
+  padding-left: 15px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  width: 50%;
+  height: 58px;
+  vertical-align: middle;
+
+  &--price {
+    border-top-right-radius: 4px;
+    padding-left: 2px;
+  }
+
+  &--name {
+    border-top-left-radius: 4px;
+    padding-right: 10px;
+  }
+}
+
+.price-list__name,
+.price-list__price, {
+  display: table-cell;
+  text-align: left;
+  height: 56px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid rgba($primary-dark, 0.1);
+  vertical-align: middle;
+}
+
+.price-list__name {
+  padding-left: 15px;
+  width: 75%;
+}
+
+.price-list__price {
+  padding-left: 8px;
+  text-align: left;
+  font-weight: bold;
 }
