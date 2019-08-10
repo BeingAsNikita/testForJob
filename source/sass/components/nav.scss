@@ -1,16 +1,68 @@
-.nav {
+.nav__wrap {
+  display: flex;
+  flex-direction: column;
+
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  padding-left: 15px;
-  padding-right: 15px;
   background-color: rgba($primary-dark, 0.45);
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+    padding-top: 9px;
+    padding-bottom: 12px;
+    padding-right: 15px;
+  }
+}
+
+.nav__logo {
   padding-top: 9px;
+  padding-left: 15px;
   padding-bottom: 12px;
+  display: block;
+}
+
+.nav {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  background-color: $primary-light;
+
+  @media (min-width: $desktop-width) {
+    width: 39%;
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba($primary-light, 0);
+  }
+}
+
+.nav__link {
+  display: block;
+  color: $primary-dark;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    color: $primary-light;
+    font-weight: normal;
+
+    &:hover {
+      color: lighten($accent, 30%);
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: lighten($accent, 10%);
+    }
+  }
 }
 
 .nav__logo-title {
@@ -46,15 +98,42 @@
     left: 0;
     background-color: $primary-light;
   }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .nav__list {
-  display: none;
-  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &--open {
+    display: block;
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
+  }
 }
 
 .nav__item {
+
   text-transform: uppercase;
   color: $primary-light;
   text-align: center;
+  padding: 10px;
+  border-top: 1px solid $primary-light;
+  border-bottom: 1px solid $input;
+
+  @media (min-width: $desktop-width) {
+    border: none;
+  }
 }

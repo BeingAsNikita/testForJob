@@ -3,22 +3,46 @@
   padding-bottom: 34px;
   text-align: center;
   color: $primary-dark;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 44px;
+  }
 }
 
 .guarantees__title {
   margin: 0 auto;
   text-transform: uppercase;
   margin-bottom: 27px;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
 }
 
 .guarantees__list {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    width: 65%;
+  }
 }
 
 .guarantees__item {
   text-align: left;
   padding-left: 74px;
+
+  &--first,
+  &--second {
+    @media (min-width: $tablet-width) {
+      width: 48%;
+      margin-bottom: 5%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100%;
+    }
+  }
 }
 
 .guarantees__item-title {

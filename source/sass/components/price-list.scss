@@ -9,6 +9,10 @@
 
 .price-list__title {
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+  }
 }
 
 .price-list__table {

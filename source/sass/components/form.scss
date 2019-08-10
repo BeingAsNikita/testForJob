@@ -13,6 +13,18 @@
   margin-left: -145px;
   border-radius: 3px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
+  @media (min-width: $tablet-width) {
+    width: 290px;
+    left: 77%;
+    top: 90%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 376px;
+    left: 77%;
+    top: 90%;
+  }
 }
 
 .form__title {

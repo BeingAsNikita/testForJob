@@ -4,6 +4,10 @@
   background-size: cover;
   padding-top: 120px;
   padding-bottom: 165px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 180px;
+  }
 }
 
 .header__preview {
@@ -17,8 +21,38 @@
   font-size: 32px;
   line-height: 41px;
 
+  @media (min-width: $tablet-width) {
+    font-size: 48px;
+    width: 710px;
+    margin-bottom: 17px;
+    margin-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+
+    line-height: 56px;
+    margin-bottom: 42px;
+  }
+
   &--small {
     font-size: 16px;
     line-height: 21px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
+  }
+}
+
+.header__preview-text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: $primary-light;
+    font-size: 16px;
+    line-height: 19px;
   }
 }

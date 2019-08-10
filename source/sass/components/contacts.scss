@@ -1,0 +1,29 @@
+.contacts {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $primary-light;
+  }
+}
+
+.contacts__callback-link {
+  font-size: 16px;
+  display: block;
+  margin-left: 36px;
+  text-decoration: underline;
+}
+
+.contacts__callback-link,
+.contacts__phone-number {
+  &:hover {
+    color: lighten($accent, 30%);
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: lighten($accent, 10%);
+  }
+}

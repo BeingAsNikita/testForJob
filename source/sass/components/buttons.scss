@@ -1,5 +1,5 @@
 .button__callback {
-  width: 175px;
+  width: 165px;
   display: block;
   text-transform: uppercase;
   color: $primary-light;
@@ -14,11 +14,40 @@
   border-radius: 4px;
   margin: 0 auto;
   margin-top: 23px;
+  transition: ease 0.5s;
+
+  &--preview:hover {
+    background-color: $primary-light;
+    color: $primary-dark;
+  }
+
+  &--preview:active {
+    background-color: darken($primary-light, 50%);
+    color: $primary-dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 42px;
+  }
 
   &--form {
     background-color: $accent;
     border: 2px solid rgba($primary-dark, 0.1);
-    width: 100%;
     box-shadow: -1px 13px 29px -20px rgba(0, 0, 0, 0.75);
+
+    &:hover {
+      background-color: lighten($accent, 10%);
+      color: lighten($primary-light, 50%);
+    }
+
+    &:active {
+      background-color: darken($accent, 5%);
+      color: darken($primary-light, 10%);
+    }
+  }
+
+  &--big {
+    width: 100%;
+    max-width: 275px;
   }
 }
